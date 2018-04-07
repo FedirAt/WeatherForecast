@@ -1,0 +1,23 @@
+{
+  "name": "weatherforecast",
+  "version": "1.0.0",
+  "description": "weatherApp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "FedirAko",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mocha": "^5.0.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "require": "^2.4.20",
+    "uglify-js": "^3.3.18",
+    "window-popup": "^1.1.0"
+  }
+}

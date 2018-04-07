@@ -1,0 +1,257 @@
+/* less than 486px - basic style*/
+html {
+  height: 100%; /* for footer to bottom*/
+}
+body {
+  background-image: url("../images/city.jpeg");
+  background-size: auto;
+  min-height: 100%; /* for footer to bottom*/
+  margin: 0;
+  font-family: 'Libre Baskerville', serif;
+}
+.about {
+  margin: 15% 15%;
+  line-height: 1.5em;
+  letter-spacing: 0.2em;
+}
+.about a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+}
+.about article {
+  text-indent: 1.5em;
+}
+
+
+/*NAVBAR*/
+.container {
+  display: grid;
+  margin-bottom: 1.5em;
+}
+.three {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+.two {
+  grid-column: 3 / 4;
+  grid-row: 1;
+}
+#brand {
+  margin: auto;
+}
+ul {
+  margin: 0 10% 0 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  float: right;
+  padding: 5%;
+}
+nav a {
+  padding: 5%;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+nav a:hover {
+  color: rgb(60, 30, 30);
+  transition: color 0.5s ease;
+  font-weight: bold;
+}
+header {
+  position: sticky;
+  top: 0;
+  background-color: #778899;
+}
+
+/*FORM*/
+form {
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  margin: auto 20%;
+}
+.label {
+  grid-column: 1;
+  grid-row: 1;
+  text-align: center;
+  margin: auto;
+}
+.inputText {
+  grid-column: 2 / 3;
+  grid-row: 1;
+  width: 100%;
+}
+.inputSubmit {
+  grid-column: 3 / 4;
+  grid-row: 1;
+  }
+input[type=text] {
+  width: 80%;
+  margin: 0 5%;
+  border: 1px solid #FFFFDD;
+  font-size: 1.2em;
+  }
+button {
+  margin: 5% 40%;
+  background-color: #778899;
+  border-radius: 8px;
+  border: 0px;
+  color: white;
+  height: 2em;
+  width: 4em;
+  font-size: 0.9em;
+}
+.label {
+  margin-bottom: 5%;
+}
+/* under cards*/
+h2 {
+  text-align: center;
+  margin: 2em;
+}
+
+/*CARDS*/
+.world {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-gap: 1.5em;
+}
+.card1, .card2, .card3 {
+  border-right: 3px solid rgba(30, 30, 20, 0.5);
+  border-bottom: 3px solid rgba(30, 30, 20, 0.5);
+  border-radius: 2%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2%;
+  background-color: rgba(250, 250 , 250, 0.5);
+}
+div .h3 {
+  grid-column: 1 / 5;
+  grid-row: 1;
+  text-align: center;
+}
+div .img {
+  grid-column: 1 / 3;
+  grid-row: 2;
+}
+img.cities {
+  display: block;
+  margin: 0;
+  float: right;
+}
+.temp {
+  grid-column: 3 / 3;
+  grid-row: 2;
+  font-size: 2em;
+  margin: 0;
+  text-align: right;
+}
+.celc {
+  grid-column: 4 / 4;
+  grid-row: 2;
+  margin: 0;
+  float: left;
+}
+.description {
+  grid-column: 1 / 5;
+  grid-row: 3;
+  margin: auto;
+  padding-bottom: 10%;
+  font-weight: bold;
+}
+.description span {
+  text-align: center;
+}
+.humidity {
+  grid-column: 1 / 5;
+  grid-row: 4;
+  text-indent: 2px;
+  text-align: center;
+  margin: 1%;
+}
+.pressure {
+  grid-column: 1 / 5;
+  grid-row: 5;
+  text-indent: 2px;
+  text-align: center;
+  margin: 1%;
+}
+.speed {
+  grid-column: 1 / 5;
+  grid-row: 6;
+  text-indent: 2px;
+  text-align: center;
+  margin: 1%;
+}
+
+/*for cards in result page*/
+.resultCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+  margin: 8em 1.5em 1.5em 1.5em;
+}
+#back {
+  text-decoration: none;
+  color: white;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+#date {
+  font-weight: bold;
+}
+
+/*footer*/
+ footer {
+   width: 100%;
+   text-align: center;
+   font-weight: bold;
+   color: white;
+   background-color: #778899;
+}
+
+/*MEDIA QUERIES*/
+/*486px and up*/
+@media (min-width: 486px) {
+  .world {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    margin: 1.5em;
+  }
+}
+
+/*568px and up*/
+@media (min-width: 568px) {
+  .world {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1.5em;
+  }
+  footer {
+    position: absolute; /* for footer to bottom*/
+    bottom: 0;     /* for footer to bottom*/
+ }
+}
+
+/*700px and up*/
+@media (min-width: 700px) {
+  form {
+    margin: 2% 20%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  input[type=text] {
+    width: 95%;
+    margin: auto;
+  }
+  .inputText, .inputSubmit {
+    margin: auto 2%;
+  }
+button {
+  margin: auto 0 0 0%;
+  }
+.label {
+  margin: auto;
+  width: 100%;
+  }
+}

@@ -1,0 +1,123 @@
+<% include partials/header %>
+
+<div class="container" "indexPage">
+
+
+<%# form %>
+      <form  action="/results" method="get">
+        <div class="label"><label>Search Your Location</label></div>
+        <div class="inputText"><input type="text" name="location" required id="textInput"></div>
+        <div class="inputSubmit"><button>Search</button></div>
+      </form>
+
+
+<div><h2>Weather in the World</h2></div>
+
+<%# three cities %>
+<div class="world">
+
+  <div class="card1">
+    <div class="h3"><h3>NEW YORK</h3></div>
+    <div class="img">
+      <img class="cities" src=<%= "http://openweathermap.org/img/w/" + treeCitiesData.list[2].weather[0].icon + ".png" %> alt="Weather Icon">
+    </div>
+
+    <div class="temp"><%= Math.round(treeCitiesData.list[2].main.temp) %></div>
+    <div class="celc">
+      <img src="images/celc1.png" alt="Celcius">
+    </div>
+
+    <div class="description">
+      <span><%= treeCitiesData.list[2].weather[0].description.toUpperCase(); %></span>
+    </div>
+
+    <div class="humidity">
+      <span>Humidity</span>
+      <span><%= treeCitiesData.list[2].main.humidity %> % </span>
+    </div>
+
+    <div class="pressure" >
+      <span>Pressure</span>
+      <span><%= treeCitiesData.list[2].main.pressure %> hPa </span>
+    </div>
+
+    <div class="speed">
+      <span>Wind</span>
+      <span><%= treeCitiesData.list[2].wind.speed %> meter/sec </span>
+    </div>
+
+  </div>
+
+
+<div class="card2">
+  <div class="h3"><h3>LONDON</h3></div>
+
+  <div class="img">
+    <img class="cities" src=<%= "http://openweathermap.org/img/w/" + treeCitiesData.list[1].weather[0].icon + ".png" %> alt="Weather Icon">
+  </div>
+
+  <div class="temp"><%= Math.round(treeCitiesData.list[1].main.temp) %></div>
+  <div class="celc">
+    <img src="images/celc1.png" alt="Celcius">
+  </div>
+
+  <div class="description">
+    <span><%= treeCitiesData.list[1].weather[0].description.toUpperCase(); %></span>
+  </div>
+
+  <div class="humidity">
+    <span>Humidity</span>
+    <span><%= treeCitiesData.list[1].main.humidity %> % </span>
+  </div>
+
+  <div class="pressure" >
+    <span>Pressure</span>
+    <span><%= treeCitiesData.list[1].main.pressure %> hPa </span>
+  </div>
+
+  <div class="speed">
+    <span>Wind</span>
+    <span><%= treeCitiesData.list[1].wind.speed %> meter/sec </span>
+  </div>
+</div>
+
+
+    <div class="card3">
+      <div class="h3"><h3>TOKYO</h3></div>
+
+      <div class="img">
+        <img class="cities" src=<%= "http://openweathermap.org/img/w/" + treeCitiesData.list[0].weather[0].icon + ".png" %> alt="Weather Icon">
+      </div>
+
+      <div class="temp"><%= Math.round(treeCitiesData.list[0].main.temp) %></div>
+      <div class="celc">
+        <img src="images/celc1.png" alt="Celcius">
+      </div>
+
+      <div class="description">
+        <span><%= treeCitiesData.list[0].weather[0].description.toUpperCase(); %></span>
+      </div>
+
+      <div class="humidity">
+        <span>Humidity</span>
+        <span><%= treeCitiesData.list[0].main.humidity %> % </span>
+      </div>
+
+      <div class="pressure">
+        <span>Pressure</span>
+        <span><%= treeCitiesData.list[0].main.pressure %> hPa </span>
+      </div>
+
+      <div class="speed">
+        <span>Wind</span>
+        <span><%= treeCitiesData.list[0].wind.speed %> meter/sec </span>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+<% include partials/footer %>
